@@ -1,19 +1,13 @@
 ---
 title: "DataMemberFieldEditor Class | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/30/2017"
 ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
+ms.technology: "dotnet-winforms"
 ms.topic: "article"
-apiname: 
-  - "System.Windows.Forms.Design.DataMemberFieldEditor"
-apilocation: 
-  - "System.Design.dll"
-apitype: "Assembly"
+api_name: "System.Windows.Forms.Design.DataMemberFieldEditor"
+api_location: "System.Design.dll"
+api_type: "Assembly"
+topic_type: "apiref"
 ms.assetid: 27ae39b7-3491-40f9-9b33-2de798f123ad
 caps.latest.revision: 4
 author: "mairaw"
