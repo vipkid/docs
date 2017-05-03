@@ -626,7 +626,7 @@ End Sub
         <param name="PathName">Optional. <see langword="String" />. The full path and name of the file containing the object to retrieve. If <c>PathName</c> is omitted, <c>Class</c> is required.</param>
         <param name="Class">Required if <c>PathName</c> is not supplied. <see langword="String" />. A string representing the class of the object. The <c>Class</c> argument has the following syntax and parts:  
   
- <c>appname</c> <c>.</c> <c>objecttype</c>  
+ <c>appname</c><c>.</c><c>objecttype</c>  
   
  [1|1] Parameter  
   
@@ -882,72 +882,72 @@ drawObj.SaveAs("C:\Drawings\sample.drw")
         <param name="Title">Optional. <see langword="String" /> expression displayed in the title bar of the dialog box. If you omit <c>Title</c>, the application name is placed in the title bar.</param>
         <summary>Displays a message in a dialog box, waits for the user to click a button, and then returns an integer indicating which button the user clicked.</summary>
         <returns>
-          <list type="table">  
-<item>  
-<term> Constant  
+          <list type="table">
+            <item>
+              <term> Constant  
   
- </term>  
-<description> Value  
+ </term>
+              <description> Value  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="OK" />  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="OK" />
+              </term>
+              <description> 1  
   
- </term>  
-<description> 1  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="Cancel" />
+              </term>
+              <description> 2  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="Cancel" />  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="Abort" />
+              </term>
+              <description> 3  
   
- </term>  
-<description> 2  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="Retry" />
+              </term>
+              <description> 4  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="Abort" />  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="Ignore" />
+              </term>
+              <description> 5  
   
- </term>  
-<description> 3  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="Yes" />
+              </term>
+              <description> 6  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="Retry" />  
+ </description>
+            </item>
+            <item>
+              <term>
+                <see langword="No" />
+              </term>
+              <description> 7  
   
- </term>  
-<description> 4  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="Ignore" />  
-  
- </term>  
-<description> 5  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="Yes" />  
-  
- </term>  
-<description> 6  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="No" />  
-  
- </term>  
-<description> 7  
-  
- </description>  
-</item>  
-</list>
+ </description>
+            </item>
+          </list>
         </returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  

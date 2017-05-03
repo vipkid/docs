@@ -74,7 +74,7 @@
     <block subset="none" type="overrides">
       <para>When you inherit from the <see cref="T:System.Xml.XPath.XPathExpression" /> class, you must override the following members:  
   
--   <see cref="M:System.Xml.XPath.XPathExpression.AddSort(System.Object,System.Collections.IComparer)" /> <see cref="M:System.Xml.XPath.XPathExpression.AddSort(System.Object,System.Xml.XPath.XmlSortOrder,System.Xml.XPath.XmlCaseOrder,System.String,System.Xml.XPath.XmlDataType)" />  
+-   <see cref="M:System.Xml.XPath.XPathExpression.AddSort(System.Object,System.Collections.IComparer)" /><see cref="M:System.Xml.XPath.XPathExpression.AddSort(System.Object,System.Xml.XPath.XmlSortOrder,System.Xml.XPath.XmlCaseOrder,System.String,System.Xml.XPath.XmlDataType)" />  
   
 -   <see cref="M:System.Xml.XPath.XPathExpression.Clone" />  
   

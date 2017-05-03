@@ -39,48 +39,27 @@
     <block subset="none" type="overrides">
       <para>When you inherit from the <see cref="T:System.Data.Common.DbDataAdapter" /> class, we recommend that you implement the following constructors:  
   
- <list type="table">  
-<listheader>  
-<term> Item  
+ <list type="table"><listheader><term> Item  
   
- </term>  
-<description> Description  
+ </term><description> Description  
   
- </description>  
-</listheader>  
-<item>  
-<term> *Prv*DataAdapter()  
+ </description></listheader><item><term> *Prv*DataAdapter()  
   
- </term>  
-<description> Initializes a new instance of the *Prv*DataAdapter class.  
+ </term><description> Initializes a new instance of the *Prv*DataAdapter class.  
   
- </description>  
-</item>  
-<item>  
-<term> *Prv*DataAdapter(*Prv*Command *selectCommand*)  
+ </description></item><item><term> *Prv*DataAdapter(*Prv*Command *selectCommand*)  
   
- </term>  
-<description> Initializes a new instance of the *Prv*DataAdapter class with the specified SQL SELECT statement.  
+ </term><description> Initializes a new instance of the *Prv*DataAdapter class with the specified SQL SELECT statement.  
   
- </description>  
-</item>  
-<item>  
-<term> *Prv*DataAdapter(string *selectCommandText*, string *selectConnectionString*)  
+ </description></item><item><term> *Prv*DataAdapter(string *selectCommandText*, string *selectConnectionString*)  
   
- </term>  
-<description> Initializes a new instance of the *Prv*DataAdapter class with an SQL SELECT statement and a connection string.  
+ </term><description> Initializes a new instance of the *Prv*DataAdapter class with an SQL SELECT statement and a connection string.  
   
- </description>  
-</item>  
-<item>  
-<term> *Prv*DataAdapter(string *selectCommandText*, *Prv*Connection *selectConnection*)  
+ </description></item><item><term> *Prv*DataAdapter(string *selectCommandText*, *Prv*Connection *selectConnection*)  
   
- </term>  
-<description> Initializes a new instance of the *Prv*DataAdapter class with an SQL SELECT statement and a *Prv*Connection object.  
+ </term><description> Initializes a new instance of the *Prv*DataAdapter class with an SQL SELECT statement and a *Prv*Connection object.  
   
- </description>  
-</item>  
-</list>  
+ </description></item></list>  
   
  To promote consistency among .NET Framework data providers, you should name the inheriting class in the form <paramref name="Prv" />DataAdapter, where <paramref name="Prv" /> is the uniform prefix given to all classes in a specific .NET Framework data provider namespace. For example, "Sql" is the prefix of the <see cref="T:System.Data.SqlClient.SqlDataAdapter" /> class in the **System.Data.SqlClient** namespace.</para>
     </block>
@@ -2510,40 +2489,23 @@ DataSet dataset = new DataSet();
         <summary>Gets or sets a value that enables or disables batch processing support, and specifies the number of commands that can be executed in a batch.</summary>
         <value>The number of rows to process per batch.  
   
- <list type="table">  
-<listheader>  
-<term> Value is  
+ <list type="table"><listheader><term> Value is  
   
- </term>  
-<description> Effect  
+ </term><description> Effect  
   
- </description>  
-</listheader>  
-<item>  
-<term> 0  
+ </description></listheader><item><term> 0  
   
- </term>  
-<description> There is no limit on the batch size.  
+ </term><description> There is no limit on the batch size.  
   
- </description>  
-</item>  
-<item>  
-<term> 1  
+ </description></item><item><term> 1  
   
- </term>  
-<description> Disables batch updating.  
+ </term><description> Disables batch updating.  
   
- </description>  
-</item>  
-<item>  
-<term> &gt; 1  
+ </description></item><item><term> &gt; 1  
   
- </term>  
-<description> Changes are sent using batches of <see cref="P:System.Data.Common.DbDataAdapter.UpdateBatchSize" /> operations at a time.  
+ </term><description> Changes are sent using batches of <see cref="P:System.Data.Common.DbDataAdapter.UpdateBatchSize" /> operations at a time.  
   
- </description>  
-</item>  
-</list>  
+ </description></item></list>  
   
  When setting this to a value other than 1 ,all the commands associated with the <see cref="T:System.Data.Common.DbDataAdapter" /> must have their <see cref="P:System.Data.IDbCommand.UpdatedRowSource" /> property set to **None** or **OutputParameters**. An exception will be thrown otherwise.</value>
         <remarks>

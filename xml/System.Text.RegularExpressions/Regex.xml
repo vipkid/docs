@@ -2042,7 +2042,7 @@
   
  -or-  
   
- <paramref name="beginning" /> <see langword="+" /> <paramref name="length" /> <see langword="–1" /> identifies a position that is outside the range of <paramref name="input" />.</exception>
+ <paramref name="beginning" /><see langword="+" /><paramref name="length" /><see langword="–1" /> identifies a position that is outside the range of <paramref name="input" />.</exception>
         <exception cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException">A time-out occurred. For more information about time-outs, see the Remarks section.</exception>
       </Docs>
     </Member>

@@ -850,7 +850,7 @@
         <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a command that sets the <see cref="T:System.Windows.Controls.Slider" /> <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> to the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> value.</summary>
+        <summary>Gets a command that sets the <see cref="T:System.Windows.Controls.Slider" /><see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> to the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Maximum" /> value.</summary>
         <value>The <see cref="T:System.Windows.Input.RoutedCommand" /> to use. The default is <see cref="F:System.Windows.Input.Key.End" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -878,7 +878,7 @@
         <ReturnType>System.Windows.Input.RoutedCommand</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets a command that sets the <see cref="T:System.Windows.Controls.Slider" /> <see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> to the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> value.</summary>
+        <summary>Gets a command that sets the <see cref="T:System.Windows.Controls.Slider" /><see cref="P:System.Windows.Controls.Primitives.RangeBase.Value" /> to the <see cref="P:System.Windows.Controls.Primitives.RangeBase.Minimum" /> value.</summary>
         <value>The <see cref="T:System.Windows.Input.RoutedCommand" /> to use. The default is <see cref="F:System.Windows.Input.Key.Home" />.</value>
         <remarks>
           <format type="text/markdown"><![CDATA[  

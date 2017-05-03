@@ -1113,40 +1113,23 @@
         <summary>Compares two <see cref="T:System.DateTimeOffset" /> objects and indicates whether the first is earlier than the second, equal to the second, or later than the second.</summary>
         <returns>A signed integer that indicates whether the value of the <paramref name="first" /> parameter is earlier than, later than, or the same time as the value of the <paramref name="second" /> parameter, as the following table shows.  
   
- <list type="table">  
-<listheader>  
-<term> Return value  
+ <list type="table"><listheader><term> Return value  
   
- </term>  
-<description> Meaning  
+ </term><description> Meaning  
   
- </description>  
-</listheader>  
-<item>  
-<term> Less than zero  
+ </description></listheader><item><term> Less than zero  
   
- </term>  
-<description> <paramref name="first" /> is earlier than <paramref name="second" />.  
+ </term><description><paramref name="first" /> is earlier than <paramref name="second" />.  
   
- </description>  
-</item>  
-<item>  
-<term> Zero  
+ </description></item><item><term> Zero  
   
- </term>  
-<description> <paramref name="first" /> is equal to <paramref name="second" />.  
+ </term><description><paramref name="first" /> is equal to <paramref name="second" />.  
   
- </description>  
-</item>  
-<item>  
-<term> Greater than zero  
+ </description></item><item><term> Greater than zero  
   
- </term>  
-<description> <paramref name="first" /> is later than <paramref name="second" />.  
+ </term><description><paramref name="first" /> is later than <paramref name="second" />.  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -1202,40 +1185,23 @@
         <summary>Compares the current <see cref="T:System.DateTimeOffset" /> object to a specified <see cref="T:System.DateTimeOffset" /> object and indicates whether the current object is earlier than, the same as, or later than the second <see cref="T:System.DateTimeOffset" /> object.</summary>
         <returns>A signed integer that indicates the relationship between the current <see cref="T:System.DateTimeOffset" /> object and <paramref name="other" />, as the following table shows.  
   
- <list type="table">  
-<listheader>  
-<term> Return Value  
+ <list type="table"><listheader><term> Return Value  
   
- </term>  
-<description> Description  
+ </term><description> Description  
   
- </description>  
-</listheader>  
-<item>  
-<term> Less than zero  
+ </description></listheader><item><term> Less than zero  
   
- </term>  
-<description> The current <see cref="T:System.DateTimeOffset" /> object is earlier than <paramref name="other" />.  
+ </term><description> The current <see cref="T:System.DateTimeOffset" /> object is earlier than <paramref name="other" />.  
   
- </description>  
-</item>  
-<item>  
-<term> Zero  
+ </description></item><item><term> Zero  
   
- </term>  
-<description> The current <see cref="T:System.DateTimeOffset" /> object is the same as <paramref name="other" />.  
+ </term><description> The current <see cref="T:System.DateTimeOffset" /> object is the same as <paramref name="other" />.  
   
- </description>  
-</item>  
-<item>  
-<term> Greater than zero.  
+ </description></item><item><term> Greater than zero.  
   
- </term>  
-<description> The current <see cref="T:System.DateTimeOffset" /> object is later than <paramref name="other" />.  
+ </term><description> The current <see cref="T:System.DateTimeOffset" /> object is later than <paramref name="other" />.  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3621,40 +3587,23 @@
         <summary>Compares the value of the current <see cref="T:System.DateTimeOffset" /> object with another object of the same type.</summary>
         <returns>A 32-bit signed integer that indicates whether the current <see cref="T:System.DateTimeOffset" /> object is less than, equal to, or greater than <paramref name="obj" />. The return values of the method are interpreted as follows:  
   
- <list type="table">  
-<listheader>  
-<term> Return Value  
+ <list type="table"><listheader><term> Return Value  
   
- </term>  
-<description> Description  
+ </term><description> Description  
   
- </description>  
-</listheader>  
-<item>  
-<term> Less than zero  
+ </description></listheader><item><term> Less than zero  
   
- </term>  
-<description> The current <see cref="T:System.DateTimeOffset" /> object is less than (earlier than) <paramref name="obj" />.  
+ </term><description> The current <see cref="T:System.DateTimeOffset" /> object is less than (earlier than) <paramref name="obj" />.  
   
- </description>  
-</item>  
-<item>  
-<term> Zero  
+ </description></item><item><term> Zero  
   
- </term>  
-<description> The current <see cref="T:System.DateTimeOffset" /> object is equal to (the same point in time as) <paramref name="obj" />.  
+ </term><description> The current <see cref="T:System.DateTimeOffset" /> object is equal to (the same point in time as) <paramref name="obj" />.  
   
- </description>  
-</item>  
-<item>  
-<term> Greater than zero  
+ </description></item><item><term> Greater than zero  
   
- </term>  
-<description> The current <see cref="T:System.DateTimeOffset" /> object is greater than (later than) <paramref name="obj" />.  
+ </term><description> The current <see cref="T:System.DateTimeOffset" /> object is greater than (later than) <paramref name="obj" />.  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

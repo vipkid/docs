@@ -92,6 +92,26 @@
     </block>
   </Docs>
   <Members>
+    <MemberGroup MemberName=".ctor">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Initializes a new instance of the <see cref="T:System.Xml.XmlTextReader" />.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Starting with the .NET Framework 2.0, we recommend that you create <xref:System.Xml.XmlReader> instances by using the <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> method to take advantage of new functionality.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="protected XmlTextReader ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
@@ -1112,6 +1132,26 @@ XmlTextReader reader = new XmlTextReader(s);
         </remarks>
       </Docs>
     </Member>
+    <MemberGroup MemberName="GetAttribute">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Gets the value of an attribute.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Starting with the .NET Framework 2.0, we recommend that you create <xref:System.Xml.XmlReader> instances by using the <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> method to take advantage of new functionality.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="GetAttribute">
       <MemberSignature Language="C#" Value="public override string GetAttribute (int i);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetAttribute(int32 i) cil managed" />
@@ -1738,6 +1778,26 @@ abc<tag/>
         <exception cref="T:System.ArgumentNullException">The <see cref="P:System.Xml.XmlTextReader.Namespaces" /> property is set to <see langword="true" /> and the <paramref name="prefix" /> value is <see langword="null" />.</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="MoveToAttribute">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Moves to the specified attribute.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+  
+> [!NOTE]
+>  Starting with the .NET Framework 2.0, we recommend that you create <xref:System.Xml.XmlReader> instances by using the <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> method to take advantage of new functionality.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="MoveToAttribute">
       <MemberSignature Language="C#" Value="public override void MoveToAttribute (int i);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void MoveToAttribute(int32 i) cil managed" />
@@ -2023,64 +2083,23 @@ abc<tag/>
   
  The name returned is dependent on the <see cref="P:System.Xml.XmlTextReader.NodeType" /> of the node. The following node types return the listed values. All other node types return an empty string.  
   
- <list type="table">  
-<listheader>  
-<term> Node Type  
+ <list type="table"><listheader><term> Node Type  
   
- </term>  
-<description> Name  
+ </term><description> Name  
   
- </description>  
-</listheader>  
-<item>  
-<term> <see langword="Attribute" />  
+ </description></listheader><item><term><see langword="Attribute" /></term><description> The name of the attribute.  
   
- </term>  
-<description> The name of the attribute.  
+ </description></item><item><term><see langword="DocumentType" /></term><description> The document type name.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="DocumentType" />  
+ </description></item><item><term><see langword="Element" /></term><description> The tag name.  
   
- </term>  
-<description> The document type name.  
+ </description></item><item><term><see langword="EntityReference" /></term><description> The name of the entity referenced.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="Element" />  
+ </description></item><item><term><see langword="ProcessingInstruction" /></term><description> The target of the processing instruction.  
   
- </term>  
-<description> The tag name.  
+ </description></item><item><term><see langword="XmlDeclaration" /></term><description> The literal string <see langword="xml" />.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="EntityReference" />  
-  
- </term>  
-<description> The name of the entity referenced.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="ProcessingInstruction" />  
-  
- </term>  
-<description> The target of the processing instruction.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="XmlDeclaration" />  
-  
- </term>  
-<description> The literal string <see langword="xml" />.  
-  
- </description>  
-</item>  
-</list></value>
+ </description></item></list></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -2778,7 +2797,8 @@ if (XmlNodeType.Element == reader.NodeType && "thing" == reader.Name)
           <paramref name="count" /> is greater than the space specified in the <paramref name="buffer" /> (buffer size - <paramref name="index" />).</exception>
         <exception cref="T:System.ArgumentNullException">The <paramref name="buffer" /> value is <see langword="null" />.</exception>
         <exception cref="T:System.ArgumentOutOfRangeException">
-          <paramref name="index" /> <see langword="&lt; 0" /> or <paramref name="count" /><see langword="&lt; 0" />.</exception>
+          <paramref name="index" />
+          <see langword="&lt; 0" /> or <paramref name="count" /><see langword="&lt; 0" />.</exception>
       </Docs>
     </Member>
     <Member MemberName="ReadContentAsBase64">
@@ -3362,88 +3382,29 @@ if (XmlNodeType.Element == reader.NodeType && "thing" == reader.Name)
         <summary>Gets the text value of the current node.</summary>
         <value>The value returned depends on the <see cref="P:System.Xml.XmlTextReader.NodeType" /> of the node. The following table lists node types that have a value to return. All other node types return <see langword="String.Empty" />.  
   
- <list type="table">  
-<listheader>  
-<term> Node Type  
+ <list type="table"><listheader><term> Node Type  
   
- </term>  
-<description> Value  
+ </term><description> Value  
   
- </description>  
-</listheader>  
-<item>  
-<term> <see langword="Attribute" />  
+ </description></listheader><item><term><see langword="Attribute" /></term><description> The value of the attribute.  
   
- </term>  
-<description> The value of the attribute.  
+ </description></item><item><term><see langword="CDATA" /></term><description> The content of the CDATA section.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="CDATA" />  
+ </description></item><item><term><see langword="Comment" /></term><description> The content of the comment.  
   
- </term>  
-<description> The content of the CDATA section.  
+ </description></item><item><term><see langword="DocumentType" /></term><description> The internal subset.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="Comment" />  
+ </description></item><item><term><see langword="ProcessingInstruction" /></term><description> The entire content, excluding the target.  
   
- </term>  
-<description> The content of the comment.  
+ </description></item><item><term><see langword="SignificantWhitespace" /></term><description> The white space within an <see langword="xml:space" />= 'preserve' scope.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="DocumentType" />  
+ </description></item><item><term><see langword="Text" /></term><description> The content of the text node.  
   
- </term>  
-<description> The internal subset.  
+ </description></item><item><term><see langword="Whitespace" /></term><description> The white space between markup.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="ProcessingInstruction" />  
+ </description></item><item><term><see langword="XmlDeclaration" /></term><description> The content of the declaration.  
   
- </term>  
-<description> The entire content, excluding the target.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="SignificantWhitespace" />  
-  
- </term>  
-<description> The white space within an <see langword="xml:space" />= 'preserve' scope.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="Text" />  
-  
- </term>  
-<description> The content of the text node.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="Whitespace" />  
-  
- </term>  
-<description> The white space between markup.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="XmlDeclaration" />  
-  
- </term>  
-<description> The content of the declaration.  
-  
- </description>  
-</item>  
-</list></value>
+ </description></item></list></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -3663,65 +3624,5 @@ if (XmlNodeType.Element == reader.NodeType && "thing" == reader.Name)
         </remarks>
       </Docs>
     </Member>
-    <MemberGroup MemberName=".ctor">
-      <AssemblyInfo>
-        <AssemblyName>System.Xml</AssemblyName>
-        <AssemblyVersion>2.0.5.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>Initializes a new instance of the <see cref="T:System.Xml.XmlTextReader" />.</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  
-> [!NOTE]
->  Starting with the .NET Framework 2.0, we recommend that you create <xref:System.Xml.XmlReader> instances by using the <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> method to take advantage of new functionality.  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="GetAttribute">
-      <AssemblyInfo>
-        <AssemblyName>System.Xml</AssemblyName>
-        <AssemblyVersion>2.0.5.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>Gets the value of an attribute.</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  
-> [!NOTE]
->  Starting with the .NET Framework 2.0, we recommend that you create <xref:System.Xml.XmlReader> instances by using the <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> method to take advantage of new functionality.  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="MoveToAttribute">
-      <AssemblyInfo>
-        <AssemblyName>System.Xml</AssemblyName>
-        <AssemblyVersion>2.0.5.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>Moves to the specified attribute.</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
-  
-> [!NOTE]
->  Starting with the .NET Framework 2.0, we recommend that you create <xref:System.Xml.XmlReader> instances by using the <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> method to take advantage of new functionality.  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
   </Members>
 </Type>

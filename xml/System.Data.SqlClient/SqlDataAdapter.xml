@@ -884,40 +884,23 @@
         <summary>Gets or sets the number of rows that are processed in each round-trip to the server.</summary>
         <value>The number of rows to process per-batch.  
   
- <list type="table">  
-<listheader>  
-<term> Value is  
+ <list type="table"><listheader><term> Value is  
   
- </term>  
-<description> Effect  
+ </term><description> Effect  
   
- </description>  
-</listheader>  
-<item>  
-<term> 0  
+ </description></listheader><item><term> 0  
   
- </term>  
-<description> There is no limit on the batch size..  
+ </term><description> There is no limit on the batch size..  
   
- </description>  
-</item>  
-<item>  
-<term> 1  
+ </description></item><item><term> 1  
   
- </term>  
-<description> Disables batch updating.  
+ </term><description> Disables batch updating.  
   
- </description>  
-</item>  
-<item>  
-<term> &gt;1  
+ </description></item><item><term> &gt;1  
   
- </term>  
-<description> Changes are sent using batches of <see cref="P:System.Data.SqlClient.SqlDataAdapter.UpdateBatchSize" /> operations at a time.  
+ </term><description> Changes are sent using batches of <see cref="P:System.Data.SqlClient.SqlDataAdapter.UpdateBatchSize" /> operations at a time.  
   
- </description>  
-</item>  
-</list>  
+ </description></item></list>  
   
  When setting this to a value other than 1, all the commands associated with the <see cref="T:System.Data.SqlClient.SqlDataAdapter" /> have to have their **UpdatedRowSource** property set to <see langword="None" /> or <see langword="OutputParameters" />. An exception is thrown otherwise.</value>
         <remarks>

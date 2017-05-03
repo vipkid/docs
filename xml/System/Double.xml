@@ -293,52 +293,35 @@
         <summary>Compares this instance to a specified double-precision floating-point number and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the specified double-precision floating-point number.</summary>
         <returns>A signed number indicating the relative values of this instance and <paramref name="value" />.  
   
- <list type="table">  
-<listheader>  
-<term> Return Value  
+ <list type="table"><listheader><term> Return Value  
   
- </term>  
-<description> Description  
+ </term><description> Description  
   
- </description>  
-</listheader>  
-<item>  
-<term> Less than zero  
+ </description></listheader><item><term> Less than zero  
   
- </term>  
-<description> This instance is less than <paramref name="value" />.  
+ </term><description> This instance is less than <paramref name="value" />.  
   
  -or-  
   
  This instance is not a number (<see cref="F:System.Double.NaN" />) and <paramref name="value" /> is a number.  
   
- </description>  
-</item>  
-<item>  
-<term> Zero  
+ </description></item><item><term> Zero  
   
- </term>  
-<description> This instance is equal to <paramref name="value" />.  
+ </term><description> This instance is equal to <paramref name="value" />.  
   
  -or-  
   
  Both this instance and <paramref name="value" /> are not a number (<see cref="F:System.Double.NaN" />), <see cref="F:System.Double.PositiveInfinity" />, or <see cref="F:System.Double.NegativeInfinity" />.  
   
- </description>  
-</item>  
-<item>  
-<term> Greater than zero  
+ </description></item><item><term> Greater than zero  
   
- </term>  
-<description> This instance is greater than <paramref name="value" />.  
+ </term><description> This instance is greater than <paramref name="value" />.  
   
  -or-  
   
  This instance is a number and <paramref name="value" /> is not a number (<see cref="F:System.Double.NaN" />).  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -400,44 +383,27 @@
         <summary>Compares this instance to a specified object and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the specified object.</summary>
         <returns>A signed number indicating the relative values of this instance and <paramref name="value" />.  
   
- <list type="table">  
-<listheader>  
-<term> Value  
+ <list type="table"><listheader><term> Value  
   
- </term>  
-<description> Description  
+ </term><description> Description  
   
- </description>  
-</listheader>  
-<item>  
-<term> A negative integer  
+ </description></listheader><item><term> A negative integer  
   
- </term>  
-<description> This instance is less than <paramref name="value" />.  
+ </term><description> This instance is less than <paramref name="value" />.  
   
  -or-  
   
  This instance is not a number (<see cref="F:System.Double.NaN" />) and <paramref name="value" /> is a number.  
   
- </description>  
-</item>  
-<item>  
-<term> Zero  
+ </description></item><item><term> Zero  
   
- </term>  
-<description> This instance is equal to <paramref name="value" />.  
+ </term><description> This instance is equal to <paramref name="value" />.  
   
  -or-  
   
- This instance and <paramref name="value" /> are both <see langword="Double.NaN" />, <see cref="F:System.Double.PositiveInfinity" />, or <see cref="F:System.Double.NegativeInfinity" />  
+ This instance and <paramref name="value" /> are both <see langword="Double.NaN" />, <see cref="F:System.Double.PositiveInfinity" />, or <see cref="F:System.Double.NegativeInfinity" /></description></item><item><term> A positive integer  
   
- </description>  
-</item>  
-<item>  
-<term> A positive integer  
-  
- </term>  
-<description> This instance is greater than <paramref name="value" />.  
+ </term><description> This instance is greater than <paramref name="value" />.  
   
  -or-  
   
@@ -447,9 +413,7 @@
   
  <paramref name="value" /> is <see langword="null" />.  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

@@ -623,6 +623,109 @@ Six Month Review Date:  7/8/2003 12:00:00 AM
         <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlReader" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="Create">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <AssemblyVersion>4.0.10.0</AssemblyVersion>
+        <AssemblyVersion>4.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <summary>Creates a new <see cref="T:System.Xml.XmlReader" /> instance.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ Most of the <xref:System.Xml.XmlReader.Create%2A> overloads include a `settings` parameter that accepts an <xref:System.Xml.XmlReaderSettings> object. You can use this object to:  
+  
+-   Specify which features you want supported on the <xref:System.Xml.XmlReader> object.  
+  
+-   Reuse the <xref:System.Xml.XmlReaderSettings> object to create multiple readers. You can use the same settings to create multiple readers with the same functionality. Or, you can modify the settings on an <xref:System.Xml.XmlReaderSettings>instance and create a new reader with a different set of features.  
+  
+-   Add features to an existing XML reader. The <xref:System.Xml.XmlReader.Create%2A> method can accept another <xref:System.Xml.XmlReader> object. The underlying <xref:System.Xml.XmlReader> object can be a user-defined reader, a <xref:System.Xml.XmlTextReader> object, or another <xref:System.Xml.XmlReader> instance that you want to add additional features to.  
+  
+-   Take full advantage of features such as better conformance checking and compliance to the [XML 1.0 (fourth edition)](http://www.w3.org/TR/2006/REC-xml-20060816/)recommendation that are available only on <xref:System.Xml.XmlReader> objects created by the static <xref:System.Xml.XmlReader.Create%2A> method.  
+  
+> [!NOTE]
+>  Although the .NET Framework includes concrete implementations of the <xref:System.Xml.XmlReader> class, such as the <xref:System.Xml.XmlTextReader>, <xref:System.Xml.XmlNodeReader>, and the <xref:System.Xml.XmlValidatingReader> classes, we recommend that you create <xref:System.Xml.XmlReader> instances by using the <xref:System.Xml.XmlReader.Create%2A> method.  
+  
+## Default settings  
+ If you use a <xref:System.Xml.XmlReader.Create%2A> overload that doesn't accept a <xref:System.Xml.XmlReaderSettings> object, the following default reader settings are used:  
+  
+|Setting|Default|  
+|-------------|-------------|  
+|<xref:System.Xml.XmlReaderSettings.CheckCharacters%2A>|`true`|  
+|<xref:System.Xml.XmlReaderSettings.ConformanceLevel%2A>|<xref:System.Xml.ConformanceLevel?displayProperty=fullName>|  
+|<xref:System.Xml.XmlReaderSettings.IgnoreComments%2A>|`false`|  
+|<xref:System.Xml.XmlReaderSettings.IgnoreProcessingInstructions%2A>|`false`|  
+|<xref:System.Xml.XmlReaderSettings.IgnoreWhitespace%2A>|`false`|  
+|<xref:System.Xml.XmlReaderSettings.LineNumberOffset%2A>|0|  
+|<xref:System.Xml.XmlReaderSettings.LinePositionOffset%2A>|0|  
+|<xref:System.Xml.XmlReaderSettings.NameTable%2A>|`null`|  
+|<xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>|<xref:System.Xml.DtdProcessing>|  
+|<xref:System.Xml.XmlReaderSettings.Schemas%2A>|An empty <xref:System.Xml.Schema.XmlSchemaSet> object|  
+|<xref:System.Xml.XmlReaderSettings.ValidationFlags%2A>|<xref:System.Xml.Schema.XmlSchemaValidationFlags> enabled|  
+|<xref:System.Xml.XmlReaderSettings.ValidationType%2A>|<xref:System.Xml.ValidationType>|  
+|<xref:System.Xml.XmlReaderSettings.XmlResolver%2A>|A new <xref:System.Xml.XmlUrlResolver> object.  Starting with the .NET Framework 4.5.2, this setting has a default value of `null`.|  
+  
+## Settings for common scenarios  
+ Here are the <xref:System.Xml.XmlReaderSettings> properties you should set for some of the typical XML reader scenarios.  
+  
+|Requirement|Set|  
+|-----------------|---------|  
+|Data must be a well-formed XML document.|<xref:System.Xml.XmlReaderSettings.ConformanceLevel%2A> to <xref:System.Xml.ConformanceLevel>.|  
+|Data must be a well-formed XML parsed entity.|<xref:System.Xml.XmlReaderSettings.ConformanceLevel%2A> to <xref:System.Xml.ConformanceLevel>.|  
+|Data must be validated against a DTD.|<xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> to <xref:System.Xml.DtdProcessing><br /><xref:System.Xml.XmlReaderSettings.ValidationType%2A> to <xref:System.Xml.ValidationType>.|  
+|Data must be validated against an XML schema.|<xref:System.Xml.XmlReaderSettings.ValidationType%2A> to <xref:System.Xml.ValidationType><br /><xref:System.Xml.XmlReaderSettings.Schemas%2A> to the <xref:System.Xml.Schema.XmlSchemaSet> to use for validation. Note that <xref:System.Xml.XmlReader> doesn't support XML-Data Reduced (XDR) schema validation.|  
+|Data must be validated against an inline XML schema.|<xref:System.Xml.XmlReaderSettings.ValidationType%2A> to <xref:System.Xml.ValidationType><br /><xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> to <xref:System.Xml.Schema.XmlSchemaValidationFlags>.|  
+|Type support.|<xref:System.Xml.XmlReaderSettings.ValidationType%2A> to <xref:System.Xml.ValidationType><br /><xref:System.Xml.XmlReaderSettings.Schemas%2A> to the <xref:System.Xml.Schema.XmlSchemaSet> to use.|  
+  
+ <xref:System.Xml.XmlReader> doesn't support XML-Data Reduced (XDR) schema validation.  
+  
+## Asynchronous programming  
+ In synchronous mode, the <xref:System.Xml.XmlReader.Create%2A> method reads the first chunk of data from the buffer of the file, stream, or text reader. This may throw an exception if an I/O operation fails. In asynchronous mode, the first I/O operation occurs with a read operation, so exceptions that arise will be thrown when the read operation occurs.  
+  
+## Security considerations  
+ By default, the <xref:System.Xml.XmlReader> uses an <xref:System.Xml.XmlUrlResolver> object with no user credentials to open resources. This means that, by default, the XML reader can access any location that doesn't require credentials. Use the <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> property to control access to resources:  
+  
+-   Set <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> to an <xref:System.Xml.XmlSecureResolver> object to restrict the resources that the XML reader can access.  
+  
+ -or-  
+  
+-   Set <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> to `null` to prevent the XML reader from opening any external resources.  
+  
+   
+  
+## Examples  
+ This example creates an XML reader that strips insignificant white space, strips comments, and performs fragment-level conformance checking.  
+  
+ [!code-csharp[XmlReader.Create#11](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader.Create/CS/XmlReader_Create.cs#11)]
+ [!code-vb[XmlReader.Create#11](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader.Create/VB/XmlReader_Create.vb#11)]  
+  
+ The following example uses an <xref:System.Xml.XmlUrlResolver> with default credentials to access a file.  
+  
+ [!code-cpp[XmlReaderSettings.cctor#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.cctor/CPP/XmlReaderSettings.cctor.cpp#1)]
+ [!code-csharp[XmlReaderSettings.cctor#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.cctor/CS/factory_rdr_cctor2.cs#1)]
+ [!code-vb[XmlReaderSettings.cctor#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.cctor/VB/factory_rdr_cctor2.vb#1)]  
+  
+ [!code-cpp[XmlReaderSettings.cctor#2](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.cctor/CPP/XmlReaderSettings.cctor.cpp#2)]
+ [!code-csharp[XmlReaderSettings.cctor#2](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.cctor/CS/factory_rdr_cctor2.cs#2)]
+ [!code-vb[XmlReaderSettings.cctor#2](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.cctor/VB/factory_rdr_cctor2.vb#2)]  
+  
+ The following code wraps a reader instance within another reader.  
+  
+ [!code-csharp[XmlReader.Create#13](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader.Create/CS/XmlReader_Create.cs#13)]
+ [!code-vb[XmlReader.Create#13](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader.Create/VB/XmlReader_Create.vb#13)]  
+  
+ This example chains readers to add DTD and XML schema validation.  
+  
+ [!code-csharp[XmlReader.Create#12](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader.Create/CS/XmlReader_Create.cs#12)]
+ [!code-vb[XmlReader.Create#12](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader.Create/VB/XmlReader_Create.vb#12)]  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="Create">
       <MemberSignature Language="C#" Value="public static System.Xml.XmlReader Create (System.IO.Stream input);" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Xml.XmlReader Create(class System.IO.Stream input) cil managed" />
@@ -801,12 +904,12 @@ Six Month Review Date:  7/8/2003 12:00:00 AM
         <exception cref="T:System.Security.SecurityException">The <see cref="T:System.Xml.XmlReader" /> does not have sufficient permissions to access the location of the XML data.</exception>
         <exception cref="T:System.IO.FileNotFoundException">The file identified by the URI does not exist.</exception>
         <exception cref="T:System.UriFormatException">
-          <block subset="none" type="note">  
-<para>  
+          <block subset="none" type="note">
+            <para>  
  In the [.NET for Windows Store apps](http://go.microsoft.com/fwlink/?LinkID=247912) or the [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), catch the base class exception, <see cref="T:System.FormatException" />, instead.  
   
-</para>  
-</block>  
+</para>
+          </block>  
   
  The URI format is not correct.</exception>
       </Docs>
@@ -992,12 +1095,12 @@ Six Month Review Date:  7/8/2003 12:00:00 AM
         <exception cref="T:System.ArgumentNullException">The <paramref name="inputUri" /> value is <see langword="null" />.</exception>
         <exception cref="T:System.IO.FileNotFoundException">The file specified by the URI cannot be found.</exception>
         <exception cref="T:System.UriFormatException">
-          <block subset="none" type="note">  
-<para>  
+          <block subset="none" type="note">
+            <para>  
  In the [.NET for Windows Store apps](http://go.microsoft.com/fwlink/?LinkID=247912) or the [Portable Class Library](~/docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md), catch the base class exception, <see cref="T:System.FormatException" />, instead.  
   
-</para>  
-</block>  
+</para>
+          </block>  
   
  The URI format is not correct.</exception>
       </Docs>
@@ -2859,64 +2962,23 @@ public class Sample
   
  The name returned is dependent on the <see cref="P:System.Xml.XmlReader.NodeType" /> of the node. The following node types return the listed values. All other node types return an empty string.  
   
- <list type="table">  
-<listheader>  
-<term> Node type  
+ <list type="table"><listheader><term> Node type  
   
- </term>  
-<description> Name  
+ </term><description> Name  
   
- </description>  
-</listheader>  
-<item>  
-<term> <see langword="Attribute" />  
+ </description></listheader><item><term><see langword="Attribute" /></term><description> The name of the attribute.  
   
- </term>  
-<description> The name of the attribute.  
+ </description></item><item><term><see langword="DocumentType" /></term><description> The document type name.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="DocumentType" />  
+ </description></item><item><term><see langword="Element" /></term><description> The tag name.  
   
- </term>  
-<description> The document type name.  
+ </description></item><item><term><see langword="EntityReference" /></term><description> The name of the entity referenced.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="Element" />  
+ </description></item><item><term><see langword="ProcessingInstruction" /></term><description> The target of the processing instruction.  
   
- </term>  
-<description> The tag name.  
+ </description></item><item><term><see langword="XmlDeclaration" /></term><description> The literal string <see langword="xml" />.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="EntityReference" />  
-  
- </term>  
-<description> The name of the entity referenced.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="ProcessingInstruction" />  
-  
- </term>  
-<description> The target of the processing instruction.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="XmlDeclaration" />  
-  
- </term>  
-<description> The literal string <see langword="xml" />.  
-  
- </description>  
-</item>  
-</list></value>
+ </description></item></list></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -5747,6 +5809,25 @@ public class Sample
         <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlReader" /> asynchronous method was called without setting the <see cref="P:System.Xml.XmlReaderSettings.Async" /> flag to <see langword="true" />. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “Set XmlReaderSettings.Async to true if you want to use Async Methods.”</exception>
       </Docs>
     </Member>
+    <MemberGroup MemberName="ReadElementString">
+      <AssemblyInfo>
+        <AssemblyName>System.Xml</AssemblyName>
+        <AssemblyVersion>2.0.5.0</AssemblyVersion>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Docs>
+        <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlReader" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
+        <summary>Reads the simple text-only elements. However, we recommend that you use the <see cref="Overload:System.Xml.XmlReader.ReadElementContentAsString" /> method instead, because it provides a more straightforward way to handle this operation.</summary>
+        <remarks>
+          <format type="text/markdown"><![CDATA[  
+  
+## Remarks  
+ We recommend that you use the <xref:System.Xml.XmlReader.ReadElementContentAsString%2A> method to read a text element.  
+  
+ ]]></format>
+        </remarks>
+      </Docs>
+    </MemberGroup>
     <Member MemberName="ReadElementString">
       <MemberSignature Language="C#" Value="public virtual string ReadElementString ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string ReadElementString() cil managed" />
@@ -6942,12 +7023,10 @@ reader.ReadToFollowing("item", "urn:1");
   
  If this property is called from an <see cref="T:System.Xml.XmlTextReader" /> or an <see cref="T:System.Xml.XmlValidatingReader" /> object, this property always returns <see langword="null" />. These <see langword="XmlReader" /> implementations do not expose schema information through the <see langword="SchemaInfo" /> property.  
   
- <block subset="none" type="note">  
-<para>  
+ <block subset="none" type="note"><para>  
  If you have to get the post-schema-validation information set (PSVI) for an element, position the reader on the end tag of the element, rather than on the start tag. You get the PSVI through the <see langword="SchemaInfo" /> property of a reader. The validating reader that is created through <see cref="Overload:System.Xml.XmlReader.Create" /> with the <see cref="P:System.Xml.XmlReaderSettings.ValidationType" /> property set to <see cref="F:System.Xml.ValidationType.Schema" /> has complete PSVI for an element only when the reader is positioned on the end tag of an element.  
   
-</para>  
-</block></value>
+</para></block></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -7144,88 +7223,29 @@ reader.ReadToFollowing("item", "urn:1");
         <summary>When overridden in a derived class, gets the text value of the current node.</summary>
         <value>The value returned depends on the <see cref="P:System.Xml.XmlReader.NodeType" /> of the node. The following table lists node types that have a value to return. All other node types return <see langword="String.Empty" />.  
   
- <list type="table">  
-<listheader>  
-<term> Node type  
+ <list type="table"><listheader><term> Node type  
   
- </term>  
-<description> Value  
+ </term><description> Value  
   
- </description>  
-</listheader>  
-<item>  
-<term> <see langword="Attribute" />  
+ </description></listheader><item><term><see langword="Attribute" /></term><description> The value of the attribute.  
   
- </term>  
-<description> The value of the attribute.  
+ </description></item><item><term><see langword="CDATA" /></term><description> The content of the CDATA section.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="CDATA" />  
+ </description></item><item><term><see langword="Comment" /></term><description> The content of the comment.  
   
- </term>  
-<description> The content of the CDATA section.  
+ </description></item><item><term><see langword="DocumentType" /></term><description> The internal subset.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="Comment" />  
+ </description></item><item><term><see langword="ProcessingInstruction" /></term><description> The entire content, excluding the target.  
   
- </term>  
-<description> The content of the comment.  
+ </description></item><item><term><see langword="SignificantWhitespace" /></term><description> The white space between markup in a mixed content model.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="DocumentType" />  
+ </description></item><item><term><see langword="Text" /></term><description> The content of the text node.  
   
- </term>  
-<description> The internal subset.  
+ </description></item><item><term><see langword="Whitespace" /></term><description> The white space between markup.  
   
- </description>  
-</item>  
-<item>  
-<term> <see langword="ProcessingInstruction" />  
+ </description></item><item><term><see langword="XmlDeclaration" /></term><description> The content of the declaration.  
   
- </term>  
-<description> The entire content, excluding the target.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="SignificantWhitespace" />  
-  
- </term>  
-<description> The white space between markup in a mixed content model.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="Text" />  
-  
- </term>  
-<description> The content of the text node.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="Whitespace" />  
-  
- </term>  
-<description> The white space between markup.  
-  
- </description>  
-</item>  
-<item>  
-<term> <see langword="XmlDeclaration" />  
-  
- </term>  
-<description> The content of the declaration.  
-  
- </description>  
-</item>  
-</list></value>
+ </description></item></list></value>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -7380,127 +7400,5 @@ reader.ReadToFollowing("item", "urn:1");
         <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlReader" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
       </Docs>
     </Member>
-    <MemberGroup MemberName="ReadElementString">
-      <AssemblyInfo>
-        <AssemblyName>System.Xml</AssemblyName>
-        <AssemblyVersion>2.0.5.0</AssemblyVersion>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <exception cref="T:System.InvalidOperationException">An <see cref="T:System.Xml.XmlReader" /> method was called before a previous asynchronous operation finished. In this case, <see cref="T:System.InvalidOperationException" /> is thrown with the message “An asynchronous operation is already in progress.”</exception>
-        <summary>Reads the simple text-only elements. However, we recommend that you use the <see cref="Overload:System.Xml.XmlReader.ReadElementContentAsString" /> method instead, because it provides a more straightforward way to handle this operation.</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- We recommend that you use the <xref:System.Xml.XmlReader.ReadElementContentAsString%2A> method to read a text element.  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
-    <MemberGroup MemberName="Create">
-      <AssemblyInfo>
-        <AssemblyName>System.Xml.ReaderWriter</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
-        <AssemblyVersion>4.0.10.0</AssemblyVersion>
-        <AssemblyVersion>4.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Docs>
-        <summary>Creates a new <see cref="T:System.Xml.XmlReader" /> instance.</summary>
-        <remarks>
-          <format type="text/markdown"><![CDATA[  
-  
-## Remarks  
- Most of the <xref:System.Xml.XmlReader.Create%2A> overloads include a `settings` parameter that accepts an <xref:System.Xml.XmlReaderSettings> object. You can use this object to:  
-  
--   Specify which features you want supported on the <xref:System.Xml.XmlReader> object.  
-  
--   Reuse the <xref:System.Xml.XmlReaderSettings> object to create multiple readers. You can use the same settings to create multiple readers with the same functionality. Or, you can modify the settings on an <xref:System.Xml.XmlReaderSettings>instance and create a new reader with a different set of features.  
-  
--   Add features to an existing XML reader. The <xref:System.Xml.XmlReader.Create%2A> method can accept another <xref:System.Xml.XmlReader> object. The underlying <xref:System.Xml.XmlReader> object can be a user-defined reader, a <xref:System.Xml.XmlTextReader> object, or another <xref:System.Xml.XmlReader> instance that you want to add additional features to.  
-  
--   Take full advantage of features such as better conformance checking and compliance to the [XML 1.0 (fourth edition)](http://www.w3.org/TR/2006/REC-xml-20060816/)recommendation that are available only on <xref:System.Xml.XmlReader> objects created by the static <xref:System.Xml.XmlReader.Create%2A> method.  
-  
-> [!NOTE]
->  Although the .NET Framework includes concrete implementations of the <xref:System.Xml.XmlReader> class, such as the <xref:System.Xml.XmlTextReader>, <xref:System.Xml.XmlNodeReader>, and the <xref:System.Xml.XmlValidatingReader> classes, we recommend that you create <xref:System.Xml.XmlReader> instances by using the <xref:System.Xml.XmlReader.Create%2A> method.  
-  
-## Default settings  
- If you use a <xref:System.Xml.XmlReader.Create%2A> overload that doesn't accept a <xref:System.Xml.XmlReaderSettings> object, the following default reader settings are used:  
-  
-|Setting|Default|  
-|-------------|-------------|  
-|<xref:System.Xml.XmlReaderSettings.CheckCharacters%2A>|`true`|  
-|<xref:System.Xml.XmlReaderSettings.ConformanceLevel%2A>|<xref:System.Xml.ConformanceLevel?displayProperty=fullName>|  
-|<xref:System.Xml.XmlReaderSettings.IgnoreComments%2A>|`false`|  
-|<xref:System.Xml.XmlReaderSettings.IgnoreProcessingInstructions%2A>|`false`|  
-|<xref:System.Xml.XmlReaderSettings.IgnoreWhitespace%2A>|`false`|  
-|<xref:System.Xml.XmlReaderSettings.LineNumberOffset%2A>|0|  
-|<xref:System.Xml.XmlReaderSettings.LinePositionOffset%2A>|0|  
-|<xref:System.Xml.XmlReaderSettings.NameTable%2A>|`null`|  
-|<xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>|<xref:System.Xml.DtdProcessing>|  
-|<xref:System.Xml.XmlReaderSettings.Schemas%2A>|An empty <xref:System.Xml.Schema.XmlSchemaSet> object|  
-|<xref:System.Xml.XmlReaderSettings.ValidationFlags%2A>|<xref:System.Xml.Schema.XmlSchemaValidationFlags> enabled|  
-|<xref:System.Xml.XmlReaderSettings.ValidationType%2A>|<xref:System.Xml.ValidationType>|  
-|<xref:System.Xml.XmlReaderSettings.XmlResolver%2A>|A new <xref:System.Xml.XmlUrlResolver> object.  Starting with the .NET Framework 4.5.2, this setting has a default value of `null`.|  
-  
-## Settings for common scenarios  
- Here are the <xref:System.Xml.XmlReaderSettings> properties you should set for some of the typical XML reader scenarios.  
-  
-|Requirement|Set|  
-|-----------------|---------|  
-|Data must be a well-formed XML document.|<xref:System.Xml.XmlReaderSettings.ConformanceLevel%2A> to <xref:System.Xml.ConformanceLevel>.|  
-|Data must be a well-formed XML parsed entity.|<xref:System.Xml.XmlReaderSettings.ConformanceLevel%2A> to <xref:System.Xml.ConformanceLevel>.|  
-|Data must be validated against a DTD.|<xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> to <xref:System.Xml.DtdProcessing><br /><xref:System.Xml.XmlReaderSettings.ValidationType%2A> to <xref:System.Xml.ValidationType>.|  
-|Data must be validated against an XML schema.|<xref:System.Xml.XmlReaderSettings.ValidationType%2A> to <xref:System.Xml.ValidationType><br /><xref:System.Xml.XmlReaderSettings.Schemas%2A> to the <xref:System.Xml.Schema.XmlSchemaSet> to use for validation. Note that <xref:System.Xml.XmlReader> doesn't support XML-Data Reduced (XDR) schema validation.|  
-|Data must be validated against an inline XML schema.|<xref:System.Xml.XmlReaderSettings.ValidationType%2A> to <xref:System.Xml.ValidationType><br /><xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> to <xref:System.Xml.Schema.XmlSchemaValidationFlags>.|  
-|Type support.|<xref:System.Xml.XmlReaderSettings.ValidationType%2A> to <xref:System.Xml.ValidationType><br /><xref:System.Xml.XmlReaderSettings.Schemas%2A> to the <xref:System.Xml.Schema.XmlSchemaSet> to use.|  
-  
- <xref:System.Xml.XmlReader> doesn't support XML-Data Reduced (XDR) schema validation.  
-  
-## Asynchronous programming  
- In synchronous mode, the <xref:System.Xml.XmlReader.Create%2A> method reads the first chunk of data from the buffer of the file, stream, or text reader. This may throw an exception if an I/O operation fails. In asynchronous mode, the first I/O operation occurs with a read operation, so exceptions that arise will be thrown when the read operation occurs.  
-  
-## Security considerations  
- By default, the <xref:System.Xml.XmlReader> uses an <xref:System.Xml.XmlUrlResolver> object with no user credentials to open resources. This means that, by default, the XML reader can access any location that doesn't require credentials. Use the <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> property to control access to resources:  
-  
--   Set <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> to an <xref:System.Xml.XmlSecureResolver> object to restrict the resources that the XML reader can access.  
-  
- -or-  
-  
--   Set <xref:System.Xml.XmlReaderSettings.XmlResolver%2A> to `null` to prevent the XML reader from opening any external resources.  
-  
-   
-  
-## Examples  
- This example creates an XML reader that strips insignificant white space, strips comments, and performs fragment-level conformance checking.  
-  
- [!code-csharp[XmlReader.Create#11](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader.Create/CS/XmlReader_Create.cs#11)]
- [!code-vb[XmlReader.Create#11](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader.Create/VB/XmlReader_Create.vb#11)]  
-  
- The following example uses an <xref:System.Xml.XmlUrlResolver> with default credentials to access a file.  
-  
- [!code-cpp[XmlReaderSettings.cctor#1](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.cctor/CPP/XmlReaderSettings.cctor.cpp#1)]
- [!code-csharp[XmlReaderSettings.cctor#1](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.cctor/CS/factory_rdr_cctor2.cs#1)]
- [!code-vb[XmlReaderSettings.cctor#1](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.cctor/VB/factory_rdr_cctor2.vb#1)]  
-  
- [!code-cpp[XmlReaderSettings.cctor#2](~/samples/snippets/cpp/VS_Snippets_Data/XmlReaderSettings.cctor/CPP/XmlReaderSettings.cctor.cpp#2)]
- [!code-csharp[XmlReaderSettings.cctor#2](~/samples/snippets/csharp/VS_Snippets_Data/XmlReaderSettings.cctor/CS/factory_rdr_cctor2.cs#2)]
- [!code-vb[XmlReaderSettings.cctor#2](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReaderSettings.cctor/VB/factory_rdr_cctor2.vb#2)]  
-  
- The following code wraps a reader instance within another reader.  
-  
- [!code-csharp[XmlReader.Create#13](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader.Create/CS/XmlReader_Create.cs#13)]
- [!code-vb[XmlReader.Create#13](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader.Create/VB/XmlReader_Create.vb#13)]  
-  
- This example chains readers to add DTD and XML schema validation.  
-  
- [!code-csharp[XmlReader.Create#12](~/samples/snippets/csharp/VS_Snippets_Data/XmlReader.Create/CS/XmlReader_Create.cs#12)]
- [!code-vb[XmlReader.Create#12](~/samples/snippets/visualbasic/VS_Snippets_Data/XmlReader.Create/VB/XmlReader_Create.vb#12)]  
-  
- ]]></format>
-        </remarks>
-      </Docs>
-    </MemberGroup>
   </Members>
 </Type>

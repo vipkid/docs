@@ -1342,40 +1342,23 @@ public static OracleDataAdapter CreateCustomerAdapter(OracleConnection conn)
         <summary>Gets or sets a value that enables or disables batch processing support, and specifies the number of commands that can be executed in a batch.</summary>
         <value>The number of rows to process per batch.  
   
- <list type="table">  
-<listheader>  
-<term> Value:  
+ <list type="table"><listheader><term> Value:  
   
- </term>  
-<description> Effect:  
+ </term><description> Effect:  
   
- </description>  
-</listheader>  
-<item>  
-<term> 0  
+ </description></listheader><item><term> 0  
   
- </term>  
-<description> There is no limit on the batch size.  
+ </term><description> There is no limit on the batch size.  
   
- </description>  
-</item>  
-<item>  
-<term> 1  
+ </description></item><item><term> 1  
   
- </term>  
-<description> Disables batch updating.  
+ </term><description> Disables batch updating.  
   
- </description>  
-</item>  
-<item>  
-<term> &gt; 1  
+ </description></item><item><term> &gt; 1  
   
- </term>  
-<description> Changes are sent using batches of <see cref="P:System.Data.OracleClient.OracleDataAdapter.UpdateBatchSize" /> operations at a time.  
+ </term><description> Changes are sent using batches of <see cref="P:System.Data.OracleClient.OracleDataAdapter.UpdateBatchSize" /> operations at a time.  
   
- </description>  
-</item>  
-</list>  
+ </description></item></list>  
   
  When setting this to a value other than 1 all the commands associated with the <see cref="T:System.Data.OracleClient.OracleDataAdapter" /> have to have their <see cref="P:System.Data.IDbCommand.UpdatedRowSource" /> property set to <see langword="None" /> or <see langword="OutputParameters" />. An exception is thrown otherwise.</value>
         <remarks>

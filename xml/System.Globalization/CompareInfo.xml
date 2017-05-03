@@ -103,40 +103,23 @@
         <summary>Compares two strings.</summary>
         <returns>A 32-bit signed integer indicating the lexical relationship between the two comparands.  
   
- <list type="table">  
-<listheader>  
-<term> Value  
+ <list type="table"><listheader><term> Value  
   
- </term>  
-<description> Condition  
+ </term><description> Condition  
   
- </description>  
-</listheader>  
-<item>  
-<term> zero  
+ </description></listheader><item><term> zero  
   
- </term>  
-<description> The two strings are equal.  
+ </term><description> The two strings are equal.  
   
- </description>  
-</item>  
-<item>  
-<term> less than zero  
+ </description></item><item><term> less than zero  
   
- </term>  
-<description> <paramref name="string1" /> is less than <paramref name="string2" />.  
+ </term><description><paramref name="string1" /> is less than <paramref name="string2" />.  
   
- </description>  
-</item>  
-<item>  
-<term> greater than zero  
+ </description></item><item><term> greater than zero  
   
- </term>  
-<description> <paramref name="string1" /> is greater than <paramref name="string2" />.  
+ </term><description><paramref name="string1" /> is greater than <paramref name="string2" />.  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -217,40 +200,23 @@
         <summary>Compares two strings using the specified <see cref="T:System.Globalization.CompareOptions" /> value.</summary>
         <returns>A 32-bit signed integer indicating the lexical relationship between the two comparands.  
   
- <list type="table">  
-<listheader>  
-<term> Value  
+ <list type="table"><listheader><term> Value  
   
- </term>  
-<description> Condition  
+ </term><description> Condition  
   
- </description>  
-</listheader>  
-<item>  
-<term> zero  
+ </description></listheader><item><term> zero  
   
- </term>  
-<description> The two strings are equal.  
+ </term><description> The two strings are equal.  
   
- </description>  
-</item>  
-<item>  
-<term> less than zero  
+ </description></item><item><term> less than zero  
   
- </term>  
-<description> <paramref name="string1" /> is less than <paramref name="string2" />.  
+ </term><description><paramref name="string1" /> is less than <paramref name="string2" />.  
   
- </description>  
-</item>  
-<item>  
-<term> greater than zero  
+ </description></item><item><term> greater than zero  
   
- </term>  
-<description> <paramref name="string1" /> is greater than <paramref name="string2" />.  
+ </term><description><paramref name="string1" /> is greater than <paramref name="string2" />.  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -320,40 +286,23 @@
         <summary>Compares the end section of a string with the end section of another string.</summary>
         <returns>A 32-bit signed integer indicating the lexical relationship between the two comparands.  
   
- <list type="table">  
-<listheader>  
-<term> Value  
+ <list type="table"><listheader><term> Value  
   
- </term>  
-<description> Condition  
+ </term><description> Condition  
   
- </description>  
-</listheader>  
-<item>  
-<term> zero  
+ </description></listheader><item><term> zero  
   
- </term>  
-<description> The two strings are equal.  
+ </term><description> The two strings are equal.  
   
- </description>  
-</item>  
-<item>  
-<term> less than zero  
+ </description></item><item><term> less than zero  
   
- </term>  
-<description> The specified section of <paramref name="string1" /> is less than the specified section of <paramref name="string2" />.  
+ </term><description> The specified section of <paramref name="string1" /> is less than the specified section of <paramref name="string2" />.  
   
- </description>  
-</item>  
-<item>  
-<term> greater than zero  
+ </description></item><item><term> greater than zero  
   
- </term>  
-<description> The specified section of <paramref name="string1" /> is greater than the specified section of <paramref name="string2" />.  
+ </term><description> The specified section of <paramref name="string1" /> is greater than the specified section of <paramref name="string2" />.  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -433,40 +382,23 @@
         <summary>Compares the end section of a string with the end section of another string using the specified <see cref="T:System.Globalization.CompareOptions" /> value.</summary>
         <returns>A 32-bit signed integer indicating the lexical relationship between the two comparands.  
   
- <list type="table">  
-<listheader>  
-<term> Value  
+ <list type="table"><listheader><term> Value  
   
- </term>  
-<description> Condition  
+ </term><description> Condition  
   
- </description>  
-</listheader>  
-<item>  
-<term> zero  
+ </description></listheader><item><term> zero  
   
- </term>  
-<description> The two strings are equal.  
+ </term><description> The two strings are equal.  
   
- </description>  
-</item>  
-<item>  
-<term> less than zero  
+ </description></item><item><term> less than zero  
   
- </term>  
-<description> The specified section of <paramref name="string1" /> is less than the specified section of <paramref name="string2" />.  
+ </term><description> The specified section of <paramref name="string1" /> is less than the specified section of <paramref name="string2" />.  
   
- </description>  
-</item>  
-<item>  
-<term> greater than zero  
+ </description></item><item><term> greater than zero  
   
- </term>  
-<description> The specified section of <paramref name="string1" /> is greater than the specified section of <paramref name="string2" />.  
+ </term><description> The specified section of <paramref name="string1" /> is greater than the specified section of <paramref name="string2" />.  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -544,40 +476,23 @@
         <summary>Compares a section of one string with a section of another string.</summary>
         <returns>A 32-bit signed integer indicating the lexical relationship between the two comparands.  
   
- <list type="table">  
-<listheader>  
-<term> Value  
+ <list type="table"><listheader><term> Value  
   
- </term>  
-<description> Condition  
+ </term><description> Condition  
   
- </description>  
-</listheader>  
-<item>  
-<term> zero  
+ </description></listheader><item><term> zero  
   
- </term>  
-<description> The two strings are equal.  
+ </term><description> The two strings are equal.  
   
- </description>  
-</item>  
-<item>  
-<term> less than zero  
+ </description></item><item><term> less than zero  
   
- </term>  
-<description> The specified section of <paramref name="string1" /> is less than the specified section of <paramref name="string2" />.  
+ </term><description> The specified section of <paramref name="string1" /> is less than the specified section of <paramref name="string2" />.  
   
- </description>  
-</item>  
-<item>  
-<term> greater than zero  
+ </description></item><item><term> greater than zero  
   
- </term>  
-<description> The specified section of <paramref name="string1" /> is greater than the specified section of <paramref name="string2" />.  
+ </term><description> The specified section of <paramref name="string1" /> is greater than the specified section of <paramref name="string2" />.  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   
@@ -674,40 +589,23 @@
         <summary>Compares a section of one string with a section of another string using the specified <see cref="T:System.Globalization.CompareOptions" /> value.</summary>
         <returns>A 32-bit signed integer indicating the lexical relationship between the two comparands.  
   
- <list type="table">  
-<listheader>  
-<term> Value  
+ <list type="table"><listheader><term> Value  
   
- </term>  
-<description> Condition  
+ </term><description> Condition  
   
- </description>  
-</listheader>  
-<item>  
-<term> zero  
+ </description></listheader><item><term> zero  
   
- </term>  
-<description> The two strings are equal.  
+ </term><description> The two strings are equal.  
   
- </description>  
-</item>  
-<item>  
-<term> less than zero  
+ </description></item><item><term> less than zero  
   
- </term>  
-<description> The specified section of <paramref name="string1" /> is less than the specified section of <paramref name="string2" />.  
+ </term><description> The specified section of <paramref name="string1" /> is less than the specified section of <paramref name="string2" />.  
   
- </description>  
-</item>  
-<item>  
-<term> greater than zero  
+ </description></item><item><term> greater than zero  
   
- </term>  
-<description> The specified section of <paramref name="string1" /> is greater than the specified section of <paramref name="string2" />.  
+ </term><description> The specified section of <paramref name="string1" /> is greater than the specified section of <paramref name="string2" />.  
   
- </description>  
-</item>  
-</list></returns>
+ </description></item></list></returns>
         <remarks>
           <format type="text/markdown"><![CDATA[  
   

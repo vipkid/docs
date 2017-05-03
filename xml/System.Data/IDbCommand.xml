@@ -47,48 +47,27 @@
   
  When you inherit from the <see cref="T:System.Data.IDbCommand" /> interface, you should implement the following constructors:  
   
- <list type="table">  
-<listheader>  
-<term> Item  
+ <list type="table"><listheader><term> Item  
   
- </term>  
-<description> Description  
+ </term><description> Description  
   
- </description>  
-</listheader>  
-<item>  
-<term> PrvCommand()  
+ </description></listheader><item><term> PrvCommand()  
   
- </term>  
-<description> Initializes a new instance of the PrvCommand class.  
+ </term><description> Initializes a new instance of the PrvCommand class.  
   
- </description>  
-</item>  
-<item>  
-<term> PrvCommand(string cmdText)  
+ </description></item><item><term> PrvCommand(string cmdText)  
   
- </term>  
-<description> Initializes a new instance of the PrvCommand class with the text of the query.  
+ </term><description> Initializes a new instance of the PrvCommand class with the text of the query.  
   
- </description>  
-</item>  
-<item>  
-<term> PrvCommand(string cmdText, PrvConnection connection)  
+ </description></item><item><term> PrvCommand(string cmdText, PrvConnection connection)  
   
- </term>  
-<description> Initializes a new instance of the PrvCommand class with the text of the query and a PrvConnection.  
+ </term><description> Initializes a new instance of the PrvCommand class with the text of the query and a PrvConnection.  
   
- </description>  
-</item>  
-<item>  
-<term> PrvCommand(string cmdText, PrvConnection connection, PrvTransaction transaction)  
+ </description></item><item><term> PrvCommand(string cmdText, PrvConnection connection, PrvTransaction transaction)  
   
- </term>  
-<description> Initializes a new instance of the PrvCommand class with the text of the query, a PrvConnection, and the PrvTransaction.  
+ </term><description> Initializes a new instance of the PrvCommand class with the text of the query, a PrvConnection, and the PrvTransaction.  
   
- </description>  
-</item>  
-</list></para>
+ </description></item></list></para>
     </block>
   </Docs>
   <Members>

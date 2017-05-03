@@ -281,9 +281,8 @@
       <Docs>
         <summary>Gets or sets a value that indicates whether the print server beeps in response to an error condition in the printer.</summary>
         <value>
-          <see cref="T:System.Boolean" />  
-  
- <see langword="true" /> if the print server beeps in response to an error; otherwise, <see langword="false" />.</value>
+          <see cref="T:System.Boolean" />
+          <see langword="true" /> if the print server beeps in response to an error; otherwise, <see langword="false" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
